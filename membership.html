@@ -2,31 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Membership - Warriaga Park FC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register as an adult, junior or family member of Warriaga Park Football Club.">
+    <title>Membership | Warriaga Park FC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Membership</h1>
-        <nav><a href="index.html">Home</a></nav>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">WFC</span>
+                <span class="brand-text">Warriaga Park FC</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="membership.html" aria-current="page">Membership</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+
+    <main id="main" class="wrap">
+        <h1>Membership</h1>
+        <p class="lead">Complete the form below to join the club for the 2026 season.</p>
+
         <h2>Join the Club</h2>
-        <form>
-            <label>Full Name: <input type="text" name="name" required></label><br><br>
-            <label>Email Address: <input type="email" name="email" required></label><br><br>
-            <label>Phone Number: <input type="tel" name="phone"></label><br><br>
-            <label>Date of Birth: <input type="date" name="dob"></label><br><br>
-            <label>
-                Membership Type:
-                <select name="type">
+        <form class="form-card" action="#" method="post">
+            <p class="required-note">Fields marked with * are required.</p>
+
+            <div class="field">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="field">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" autocomplete="bday">
+            </div>
+
+            <fieldset>
+                <legend>Membership Type</legend>
+                <label for="type" class="field-hint">Choose the membership that suits you.</label>
+                <select id="type" name="type">
                     <option value="adult">Adult - R200/year</option>
                     <option value="junior">Junior - R100/year</option>
                     <option value="family">Family - R350/year</option>
                 </select>
-            </label><br><br>
-            <button type="submit">Submit Registration</button>
+            </fieldset>
+
+            <button class="btn" type="submit">Submit Registration</button>
         </form>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p>A community football club.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -2,24 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Schedule - Warriaga Park FC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Warriaga Park FC upcoming fixtures and the latest first team results.">
+    <title>Schedule | Warriaga Park FC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Match Schedule</h1><nav><a href="index.html">Home</a></nav></header>
-    <main>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">WFC</span>
+                <span class="brand-text">Warriaga Park FC</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="schedule.html" aria-current="page">Schedule</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <h1>Match Schedule</h1>
+        <p class="lead">Kick-off times are confirmed closer to each match day.</p>
+
         <h2>Upcoming Matches</h2>
-        <ul>
-            <li>Oct 10 vs Riverside FC</li>
-            <li>Oct 17 vs City United</li>
-            <li>Oct 24 vs Lakeview SC</li>
-        </ul>
+        <div class="table-scroll">
+            <table>
+                <caption>First team fixtures</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Opponent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Oct 10</td><td>Riverside FC</td></tr>
+                    <tr><td>Oct 17</td><td>City United</td></tr>
+                    <tr><td>Oct 24</td><td>Lakeview SC</td></tr>
+                </tbody>
+            </table>
+        </div>
+
         <h2>Latest Results</h2>
-        <ul>
-            <li>Oct 03: Won 2-1 vs Green Valley</li>
-            <li>Sep 26: Lost 0-3 vs Ocean FC</li>
-            <li>Sep 19: Won 1-0 vs Hillside Rovers</li>
-        </ul>
+        <div class="table-scroll">
+            <table>
+                <caption>Most recent first team results</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Opponent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Oct 03</td><td class="result-win">Won 2-1</td><td>Green Valley</td></tr>
+                    <tr><td>Sep 26</td><td class="result-loss">Lost 0-3</td><td>Ocean FC</td></tr>
+                    <tr><td>Sep 19</td><td class="result-win">Won 1-0</td><td>Hillside Rovers</td></tr>
+                </tbody>
+            </table>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p>A community football club.</p>
+        </div>
+    </footer>
 </body>
 </html>

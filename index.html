@@ -3,26 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warriaga Park FC</title>
+    <meta name="description" content="Warriaga Park Football Club - a community football club. Fixtures, team news, membership and donations.">
+    <title>Home | Warriaga Park FC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Warriaga Park Football Club</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="membership.html">Membership</a>
-            <a href="schedule.html">Schedule</a>
-            <a href="donate.html">Donate</a>
-        </nav>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">WFC</span>
+                <span class="brand-text">Warriaga Park FC</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h2>Welcome to the Club</h2>
-        <p>The Warriaga Park FC is a community football club. This website is under construction.</p>
-        <p>Stay tuned for news and upcoming matches.</p>
+
+    <main id="main" class="wrap">
+        <section class="hero">
+            <h1>Warriaga Park Football Club</h1>
+            <p>The Warriaga Park FC is a community football club. This website is under construction.</p>
+            <p>Stay tuned for news and upcoming matches.</p>
+            <p class="hero-actions">
+                <a class="btn" href="membership.html">Join the club</a>
+                <a class="btn btn-secondary" href="schedule.html">View fixtures</a>
+            </p>
+        </section>
+
+        <h2>Explore the club</h2>
+        <div class="grid grid-3">
+            <article class="card">
+                <h3><a href="team.html">Our Team</a></h3>
+                <p>Meet the players, the coach and the volunteers who run the club.</p>
+            </article>
+            <article class="card">
+                <h3><a href="history.html">Club History</a></h3>
+                <p>How the club started and the milestones we have reached together.</p>
+            </article>
+            <article class="card">
+                <h3><a href="schedule.html">Match Schedule</a></h3>
+                <p>Upcoming fixtures and the latest results from the first team.</p>
+            </article>
+            <article class="card">
+                <h3><a href="membership.html">Membership</a></h3>
+                <p>Register as an adult, junior or family member for the season.</p>
+            </article>
+            <article class="card">
+                <h3><a href="donate.html">Donate</a></h3>
+                <p>Support the facilities, equipment and coaching that the club provides.</p>
+            </article>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2026 Warriaga Park FC</p>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p>A community football club.</p>
+        </div>
     </footer>
 </body>
 </html>
