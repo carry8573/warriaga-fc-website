@@ -12,9 +12,13 @@ follows Keep a Changelog, and the project uses semantic versioning.
 - Home page cards linking to every section of the site.
 - Skip-to-content links, a shared footer and a mobile-first responsive layout.
 - CHANGELOG.md so that changes are documented for configuration management.
+- CONFIGURATION.md: the configuration items for the site, where each setting
+  is held, and the process for changing the site safely.
 
 ### Changed
 
+- CONFIGURATION.md added so that the club committee and volunteers can see
+  which values are configuration and who approves a change.
 - style.css: rewritten with CSS custom properties, responsive navigation,
   card, table, timeline and form styles.
 - All pages: consistent header, navigation and footer; viewport meta tag and
