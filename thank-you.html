@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Thank you for supporting Warriaga Park Football Club.">
+    <title>Thank you | Warriaga Park FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true">WFC</span>
+                <span class="brand-text">Warriaga Park FC</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <div class="thanks">
+            <h1>Thank you</h1>
+            <p class="lead">Your payment went through and the club has been notified.</p>
+
+            <div class="panel">
+                <h2>What happens next</h2>
+                <p>A receipt is sent to the email address you entered. If you chose a monthly gift, the first
+                    payment is taken today and the club will contact you before the next one.</p>
+                <p>Reference: <strong id="thankyou-reference">&mdash;</strong></p>
+                <p class="field-hint">Keep this reference if you need to contact the club about the payment.</p>
+            </div>
+
+            <p><a class="btn" href="index.html">Back to the club home page</a></p>
+            <p><a href="schedule.html">See the next fixtures</a></p>
+        </div>
+    </main>
+
+        <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p><a href="mailto:info@warriagaparkfc.co.za">info@warriagaparkfc.co.za</a> &middot; +27 11 234 5678</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var reference = new URLSearchParams(window.location.search).get("ref");
+            if (reference) {
+                document.getElementById("thankyou-reference").textContent = reference;
+            }
+        })();
+    </script>
+</body>
+</html>

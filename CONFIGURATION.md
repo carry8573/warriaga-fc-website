@@ -12,9 +12,13 @@ new services.
 | team.html | First team squad, coach and club officials | When the squad or officials change |
 | history.html | Club milestones and values | When the club records a new milestone |
 | schedule.html | Upcoming fixtures and latest results | After every match |
-| membership.html | Membership registration form | When fees or form fields change |
-| donate.html | Donation call to action | When the donation link changes |
+| membership.html | Membership registration form and fee summary | When fees or form fields change |
+| donate.html | Payment page for donations and membership fees | When the payment options change |
+| thank-you.html | Confirmation page shown after a payment | Rarely; wording only |
+| contact.html | Club contact details and message form | When contact details change |
 | style.css | Shared stylesheet for all pages | When the look of the site changes |
+| config.js | Site settings: fees, payment provider, bank details | When a setting or fee changes |
+| payment.js | Checkout behaviour: amounts, summary, validation | When the payment flow changes |
 | README.md | How to run, preview and deploy the site | When the workflow changes |
 | CHANGELOG.md | Record of every change to the site | On every release |
 
@@ -24,19 +28,24 @@ new services.
 | --- | --- | --- |
 | Published site address | GitHub Pages settings | https://carry8573.github.io/warriaga-fc-website/ |
 | Publishing branch | GitHub Pages settings | main |
-| Membership fees | Option labels in membership.html | Adult R200, Junior R100, Family R350 per year |
+| Membership fees | config.js (membershipFees) and the option labels in membership.html | Adult R200, Junior R100, Family R350 per year |
 | Season year | index.html, membership.html, team.html | 2026 |
 | Membership form destination | Not connected yet | To be pointed at the club's form service before go-live |
-| Donation payment link | Not connected yet | To be set when the club confirms the payment gateway |
+| Payment provider | config.js (payment.provider, payment.mode) | PayFast, sandbox |
+| Checkout endpoint | config.js (payment.checkoutEndpoint) | Empty: card payments are disabled and the page offers bank transfer |
+| Bank transfer details | config.js (bank) | Not published yet; shown only when the treasurer confirms them |
 | Club contact details | Not published yet | To be added when the club confirms them |
 
 ## 3. Rules for configuration
 
-1. Credentials, passwords, API keys and bank details are never committed to
-   this repository.
-2. Form endpoints and payment keys are held in the settings of the form or
-   payment provider, not in the site files.
-3. Membership fees, the donation link and club contact details are only
+1. Credentials, passwords, API keys and merchant secrets are never committed
+   to this repository, including config.js.
+2. The payment provider signature cannot be created in the browser. It is
+   produced by the checkout service behind `payment.checkoutEndpoint`, which
+   holds the merchant key in its own environment settings.
+3. Bank account details are only added to config.js after the club treasurer
+   confirms them.
+4. Membership fees, the payment settings and club contact details are only
    changed after the club committee approves the change.
 
 ## 4. How to change the site safely

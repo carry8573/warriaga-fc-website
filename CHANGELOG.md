@@ -7,6 +7,13 @@ follows Keep a Changelog, and the project uses semantic versioning.
 
 ### Added
 
+- Payment page: suggested amounts, custom amount, one-off or monthly giving,
+  donor details, four payment methods and a live summary.
+- Membership fee payments: the membership page shows the selected fee and
+  links to the checkout with the type and amount.
+- thank-you.html confirmation page with a payment reference.
+- config.js for fees, payment provider and bank details, and payment.js for
+  the checkout behaviour.
 - team.html: first team squad table plus coaching and club official cards.
 - history.html: club milestone timeline and club values.
 - Home page cards linking to every section of the site.

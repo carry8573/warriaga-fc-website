@@ -24,7 +24,7 @@
                     <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="membership.html" aria-current="page">Membership</a></li>
                     <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a><li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -70,10 +70,24 @@
 
             <button class="btn" type="submit">Submit Registration</button>
         </form>
+
+        <h2>Membership fee</h2>
+        <div class="panel fee-panel">
+            <p>Selected membership: <strong id="fee-type">Adult</strong> &mdash;
+                <strong id="fee-amount">R200</strong> per year.</p>
+            <p class="field-hint">Pay now, or submit the form and the club will send payment instructions.</p>
+            <a class="btn" id="fee-pay" href="donate.html?purpose=membership&amp;type=adult&amp;amount=200">Pay membership fee</a>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Warriaga Park FC | Contact: info@warriagaparkfc.co.za | +27 11 234 5678</p>
+        <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p><a href="mailto:info@warriagaparkfc.co.za">info@warriagaparkfc.co.za</a> &middot; +27 11 234 5678</p>
+        </div>
     </footer>
+
+    <script src="config.js"></script>
+    <script src="payment.js"></script>
 </body>
 </html>

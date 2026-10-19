@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Support Warriaga Park Football Club with a donation towards facilities and equipment.">
-    <title>Donate | Warriaga Park FC</title>
+    <meta name="description" content="Donate to Warriaga Park Football Club or pay your membership fee online.">
+    <title>Payments | Warriaga Park FC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
                     <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="donate.html" aria-current="page">Donate</a></li>
-                    <li><a href="contact.html">Contact</a><li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,15 +32,158 @@
 
     <main id="main" class="wrap">
         <h1>Support the Club</h1>
-        <p class="lead">Donations keep the club running for the whole community.</p>
+        <p class="lead">Your support pays for facilities, equipment and coaching for the whole community.</p>
 
-        <h2>Make a Donation</h2>
-        <p>Your support helps us maintain facilities and equipment.</p>
-        <p><button class="btn" type="button">Donate Now</button></p>
+        <div class="checkout">
+            <form class="checkout-form" id="payment-form" novalidate>
+                <section class="panel" aria-labelledby="amount-heading">
+                    <h2 id="amount-heading">1. Choose an amount</h2>
+
+                    <p class="membership-note" id="membership-note" hidden></p>
+
+                    <div class="amount-grid" role="group" aria-label="Suggested amounts">
+                        <button type="button" class="amount" data-amount="100" aria-pressed="true">R100</button>
+                        <button type="button" class="amount" data-amount="250" aria-pressed="false">R250</button>
+                        <button type="button" class="amount" data-amount="500" aria-pressed="false">R500</button>
+                        <button type="button" class="amount" data-amount="1000" aria-pressed="false">R1,000</button>
+                    </div>
+
+                    <p class="amount-fixed" id="amount-fixed" hidden></p>
+
+                    <label class="field amount-custom" for="amount">
+                        <span>Amount in Rand</span>
+                        <input type="number" id="amount" name="amount" value="100" min="10" max="50000" step="10"
+                               inputmode="decimal" autocomplete="off" required>
+                        <small class="field-hint">Minimum R10. The club receives the full amount.</small>
+                    </label>
+
+                    <fieldset class="split" id="frequency-fieldset">
+                        <legend>How often</legend>
+                        <label class="radio">
+                            <input type="radio" name="frequency" value="once" checked>
+                            <span>One-off</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="frequency" value="monthly">
+                            <span>Monthly</span>
+                        </label>
+                    </fieldset>
+                </section>
+
+                <section class="panel" aria-labelledby="details-heading">
+                    <h2 id="details-heading">2. Your details</h2>
+                    <div class="grid grid-2">
+                        <label class="field" for="firstName">
+                            <span>First name</span>
+                            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                        </label>
+                        <label class="field" for="lastName">
+                            <span>Last name</span>
+                            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                        </label>
+                    </div>
+                    <label class="field" for="email">
+                        <span>Email address</span>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                        <small class="field-hint">We send the receipt to this address.</small>
+                    </label>
+                    <label class="field" for="phone">
+                        <span>Phone number (optional)</span>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </label>
+
+                    <label class="checkbox" for="anonymous">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <span>Do not list my name publicly</span>
+                    </label>
+
+                    <label class="field" for="message">
+                        <span>Message to the club (optional)</span>
+                        <textarea id="message" name="message" rows="3" maxlength="240"></textarea>
+                    </label>
+                </section>
+
+                <section class="panel" aria-labelledby="method-heading">
+                    <h2 id="method-heading">3. Payment method</h2>
+                    <div class="methods">
+                        <label class="method">
+                            <input type="radio" name="method" value="payfast-card" checked>
+                            <span>Card<small>Visa and Mastercard, processed by PayFast</small></span>
+                        </label>
+                        <label class="method">
+                            <input type="radio" name="method" value="payfast-eft">
+                            <span>Instant EFT<small>Pay from your online banking, processed by PayFast</small></span>
+                        </label>
+                        <label class="method">
+                            <input type="radio" name="method" value="yoco">
+                            <span>Yoco<small>Secure card checkout through Yoco</small></span>
+                        </label>
+                        <label class="method">
+                            <input type="radio" name="method" value="bank">
+                            <span>Bank transfer<small>Pay by EFT using the club's details</small></span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="panel" aria-labelledby="confirm-heading">
+                    <h2 id="confirm-heading">4. Confirm</h2>
+                    <label class="checkbox" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>I agree to the club storing these details to process my payment, in line with the
+                            club's POPIA privacy notice.</span>
+                    </label>
+
+                    <p class="notice" id="form-status" role="status" aria-live="polite" hidden></p>
+
+                    <button class="btn" type="submit" id="pay-button">Pay R100</button>
+                    <p class="secure-note">Card details are entered on the payment provider's page. The club never
+                        sees them.</p>
+                </section>
+            </form>
+
+            <aside class="summary" aria-labelledby="summary-heading">
+                <h2 id="summary-heading">Summary</h2>
+                <dl>
+                    <div>
+                        <dt>Giving to</dt>
+                        <dd id="sum-purpose">Club donation</dd>
+                    </div>
+                    <div>
+                        <dt>Amount</dt>
+                        <dd class="summary-total" id="sum-amount">R100</dd>
+                    </div>
+                    <div>
+                        <dt>Frequency</dt>
+                        <dd id="sum-frequency">One-off</dd>
+                    </div>
+                    <div>
+                        <dt>Method</dt>
+                        <dd id="sum-method">Card (PayFast)</dd>
+                    </div>
+                </dl>
+                <p class="summary-note" id="summary-note">The payment provider charges its standard transaction
+                    fee; the club keeps the rest of your gift.</p>
+                <p class="summary-note">Need to pay a membership fee instead?
+                    <a href="membership.html">Choose a membership type</a>.</p>
+            </aside>
+        </div>
+
+        <section class="panel eft-panel" id="eft-panel" aria-labelledby="eft-heading" hidden>
+            <h2 id="eft-heading">Bank transfer details</h2>
+            <p>Use these details for an EFT payment and send the proof of payment to the club committee.</p>
+            <div class="eft-list" id="eft-fields"></div>
+            <p class="eft-reference">Payment reference: <strong id="eft-reference">WFC-</strong></p>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Warriaga Park FC | Contact: info@warriagaparkfc.co.za | +27 11 234 5678</p>
+        <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 Warriaga Park FC</p>
+            <p><a href="mailto:info@warriagaparkfc.co.za">info@warriagaparkfc.co.za</a> &middot; +27 11 234 5678</p>
+        </div>
     </footer>
+
+    <script src="config.js"></script>
+    <script src="payment.js"></script>
 </body>
 </html>
